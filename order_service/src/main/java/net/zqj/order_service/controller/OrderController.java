@@ -58,7 +58,7 @@ public class OrderController {
 
         Map<String,Object> msg = new HashMap<String,Object>();
         msg.put("code",-1);
-        msg.put("msg","抢购人数太多！！！   ！！！！");
+        msg.put("msg","抢购人数太多！！！git   ！！！！");
         return msg;
     }
 
