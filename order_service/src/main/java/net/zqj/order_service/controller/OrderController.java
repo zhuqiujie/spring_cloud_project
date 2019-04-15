@@ -29,8 +29,8 @@ public class OrderController {
     @HystrixCommand(fallbackMethod = "saveOrderFail")
     public Object save(@RequestParam("userId")int userId, @RequestParam("productId")int productId, HttpServletRequest request){
 
-        System.out.println("cookie:"+request.getHeader("cookie"));
-        System.out.println("token:"+request.getHeader("token"));
+//        System.out.println("cookie:"+request.getHeader("cookie"));
+//        System.out.println("token:"+request.getHeader("token"));
 
 
 
