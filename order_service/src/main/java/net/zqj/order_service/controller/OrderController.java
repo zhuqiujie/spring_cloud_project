@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @RestController
-@RequestMapping("api/vi/order")
+@RequestMapping("/api/v1/order")
 public class OrderController {
     @Autowired
     private ProductOrderService productOrderService;
@@ -28,6 +28,9 @@ public class OrderController {
     @RequestMapping("save")
     @HystrixCommand(fallbackMethod = "saveOrderFail")
     public Object save(@RequestParam("userId")int userId, @RequestParam("productId")int productId, HttpServletRequest request){
+
+        System.out.println("cookie:"+request.getHeader("cookie"));
+        System.out.println("token:"+request.getHeader("token"));
 
 
 
