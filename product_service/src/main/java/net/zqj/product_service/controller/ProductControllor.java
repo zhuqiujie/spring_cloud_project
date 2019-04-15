@@ -32,11 +32,11 @@ public class ProductControllor {
     public Object findProduct(@RequestParam("id")int id){
 
 
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            TimeUnit.SECONDS.sleep(2);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
         Product product = productService.findProductById(id);
 
