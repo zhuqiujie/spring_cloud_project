@@ -1,0 +1,56 @@
+
+1.发送文本消息
+url:http://172.16.23.139:8078/qywxServer/qywx/api/qywxOpenService/sendTextToQywx
+method:post
+param:
+corpId:"wwd6a6821842f0746c"
+agentId:"1000004"
+msgJson:{"agentid":1000004,"msgtype":"text","safe":0,"text":{"content":"发给自己"},"toparty":"","totag":"","touser":"QiuXinChou"}
+
+返回值：JSONObject
+{
+    "errcode": 0,
+    "errmsg": "ok",
+    "invaliduser": ""
+}
+
+2.发送文本卡片消息
+url:http://172.16.23.139:8078/qywxServer/qywx/api/qywxOpenService/sendTextCardToQywx
+method:post
+param:
+corpId:"wwd6a6821842f0746c"
+agentId:"1000004"
+msgJson:
+{
+	"agentid": 1000004,
+	"msgtype": "textcard",
+	"textcard": {
+		"description": "<div class=\"gray\">2017年8月18日<\/div> <div class=\"normal\">恭喜你抽中iPhone 7一台，领奖码：xxxx<\/div><div class=\"highlight\">请于2017年10月10日前联系行政同事领取<\/div>",
+		"title": "代办事宜",
+		"url": "http://www.cnblogs.com/shirui/p/7297872.html"
+	},
+	"toparty": "",
+	"totag": "",
+	"touser": "QiuXinChou"
+}
+
+返回值：JSONObject
+{
+    "errcode": 0,
+    "errmsg": "ok",
+    "invaliduser": ""
+}
+
+3.初始化部门user成员
+url:http://172.16.23.139:8078/qywxServer/qywx/api/qywxOpenService/initDeptUserList
+method:post
+param:
+corpId:"wwd6a6821842f0746c"
+agentId:"1000004"
+
+返回值：JSONObject
+{
+    "errmsg": "ok"
+}
+
+

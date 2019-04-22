@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="book">
+
+    <select id="queryAll" resultType="cn.com.sandi.qywx.book.model.Book">
+        SELECT
+            book_id,
+            bookName,
+            bookNumber
+        FROM
+            book
+        where bookName = #{name} 
+        ORDER BY
+            book_id
+        LIMIT #{index}, #{rows}
+    </select>
+</mapper>

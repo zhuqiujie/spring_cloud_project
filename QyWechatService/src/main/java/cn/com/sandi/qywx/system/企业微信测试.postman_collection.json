@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "c4626f2f-1a16-4d72-a915-b855ca7ab4ce",
+		"name": "企业微信测试",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "testQywx",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://172.16.23.139:8078/qywxServer/api/qywx/testQywx?code=1&state=2",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"23",
+						"139"
+					],
+					"port": "8078",
+					"path": [
+						"qywxServer",
+						"api",
+						"qywx",
+						"testQywx"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1"
+						},
+						{
+							"key": "state",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendTextToQywx",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "corpId",
+							"value": "wwd6a6821842f0746c",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "agentId",
+							"value": "1000004",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "message",
+							"value": "{\"agentid\":1000004,\"msgtype\":\"text\",\"safe\":0,\"text\":{\"content\":\"发给自己\"},\"toparty\":\"\",\"totag\":\"\",\"touser\":\"QiuXinChou\"}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://172.16.23.139:8078/qywxServer/qywx/api/qywxOpenService/sendTextToQywx?corpId=wwd6a6821842f0746c&agentId=1000004&msgJson={\"agentid\":1000004,\"msgtype\":\"text\",\"safe\":0,\"text\":{\"content\":\"发给自己\"},\"toparty\":\"\",\"totag\":\"\",\"touser\":\"QiuXinChou\"}",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"23",
+						"139"
+					],
+					"port": "8078",
+					"path": [
+						"qywxServer",
+						"qywx",
+						"api",
+						"qywxOpenService",
+						"sendTextToQywx"
+					],
+					"query": [
+						{
+							"key": "corpId",
+							"value": "wwd6a6821842f0746c"
+						},
+						{
+							"key": "agentId",
+							"value": "1000004"
+						},
+						{
+							"key": "msgJson",
+							"value": "{\"agentid\":1000004,\"msgtype\":\"text\",\"safe\":0,\"text\":{\"content\":\"发给自己\"},\"toparty\":\"\",\"totag\":\"\",\"touser\":\"QiuXinChou\"}"
+						}
+					]
+				},
+				"description": "发送文本消息到通讯录成员"
+			},
+			"response": []
+		},
+		{
+			"name": "sendTextCardToQywx",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://172.16.23.139:8078/qywxServer/qywx/api/qywxOpenService/sendTextCardToQywx?corpId=wwd6a6821842f0746c&agentId=1000004&msgJson={\"agentid\":1000004,\"msgtype\":\"textcard\",\"textcard\":{\"description\":\"<div class=\\\"gray\\\">2017年8月18日<\\/div> <div class=\\\"normal\\\">恭喜你抽中iPhone 7一台，领奖码：xxxx<\\/div><div class=\\\"highlight\\\">请于2017年10月10日前联系行政同事领取<\\/div>\",\"title\":\"代办事宜\",\"url\":\"http://www.cnblogs.com/shirui/p/7297872.html\"},\"toparty\":\"\",\"totag\":\"\",\"touser\":\"QiuXinChou\"}",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"23",
+						"139"
+					],
+					"port": "8078",
+					"path": [
+						"qywxServer",
+						"qywx",
+						"api",
+						"qywxOpenService",
+						"sendTextCardToQywx"
+					],
+					"query": [
+						{
+							"key": "corpId",
+							"value": "wwd6a6821842f0746c"
+						},
+						{
+							"key": "agentId",
+							"value": "1000004"
+						},
+						{
+							"key": "msgJson",
+							"value": "{\"agentid\":1000004,\"msgtype\":\"textcard\",\"textcard\":{\"description\":\"<div class=\\\"gray\\\">2017年8月18日<\\/div> <div class=\\\"normal\\\">恭喜你抽中iPhone 7一台，领奖码：xxxx<\\/div><div class=\\\"highlight\\\">请于2017年10月10日前联系行政同事领取<\\/div>\",\"title\":\"代办事宜\",\"url\":\"http://www.cnblogs.com/shirui/p/7297872.html\"},\"toparty\":\"\",\"totag\":\"\",\"touser\":\"QiuXinChou\"}"
+						}
+					]
+				},
+				"description": "发送文本卡片"
+			},
+			"response": []
+		},
+		{
+			"name": "initDeptUserList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://172.16.23.139:8078/qywxServer/qywx/api/qywxOpenService/initDeptUserList?corpId=wwd6a6821842f0746c&agentId=1000004",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"23",
+						"139"
+					],
+					"port": "8078",
+					"path": [
+						"qywxServer",
+						"qywx",
+						"api",
+						"qywxOpenService",
+						"initDeptUserList"
+					],
+					"query": [
+						{
+							"key": "corpId",
+							"value": "wwd6a6821842f0746c"
+						},
+						{
+							"key": "agentId",
+							"value": "1000004"
+						}
+					]
+				},
+				"description": "初始化部门user信息"
+			},
+			"response": []
+		},
+		{
+			"name": "getUserIdFromQywx",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://172.16.23.139:8078/qywxServer/qywx/api/qywxOpenService/getUserIdFromQywx?corpId=wwd6a6821842f0746c&agentId=1000004&code=6c5aul-5FToa9x7J890J7AWzN_THN5iJ6jtDAS_8uhY",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"23",
+						"139"
+					],
+					"port": "8078",
+					"path": [
+						"qywxServer",
+						"qywx",
+						"api",
+						"qywxOpenService",
+						"getUserIdFromQywx"
+					],
+					"query": [
+						{
+							"key": "corpId",
+							"value": "wwd6a6821842f0746c"
+						},
+						{
+							"key": "agentId",
+							"value": "1000004"
+						},
+						{
+							"key": "code",
+							"value": "6c5aul-5FToa9x7J890J7AWzN_THN5iJ6jtDAS_8uhY"
+						}
+					]
+				},
+				"description": "获取userID"
+			},
+			"response": []
+		}
+	]
+}
