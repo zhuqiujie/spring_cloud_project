@@ -5,6 +5,8 @@ import net.zqj.order_service.domain.ProductOrder;
 import net.zqj.order_service.service.ProductClient;
 import net.zqj.order_service.service.ProductOrderService;
 import net.zqj.order_service.utils.JsonUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -27,6 +29,8 @@ public class ProductOrderServiceImpl implements ProductOrderService{
     @Autowired
     private ProductClient productClient;
 
+    private final Logger logger = LoggerFactory.getLogger(getClass());
+
     @Override
     public ProductOrder save(int userId, int productId) {
 
@@ -48,7 +52,7 @@ public class ProductOrderServiceImpl implements ProductOrderService{
         return productOrder;
 
  */
-
+        logger.info("service saveOrder  userId:"+userId+"    productId:"+productId);
         if(userId==1){
             return null;
         }

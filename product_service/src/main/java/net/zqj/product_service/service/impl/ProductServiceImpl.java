@@ -2,6 +2,8 @@ package net.zqj.product_service.service.impl;
 
 import net.zqj.product_service.domain.Product;
 import net.zqj.product_service.service.ProductService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -10,6 +12,8 @@ import java.util.*;
 public class ProductServiceImpl implements ProductService{
 
     private static Map<Integer,Product> daoMap = new HashMap<Integer,Product>();
+
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     static {
         Product product0 = new Product(1,"aa1",1,1);
@@ -41,6 +45,8 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Product findProductById(int id) {
+
+        logger.info("findProductById:"+id);
         return daoMap.get(id);
     }
 }
